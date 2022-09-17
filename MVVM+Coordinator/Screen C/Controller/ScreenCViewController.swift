@@ -33,7 +33,6 @@ class ScreenCViewController: UIViewController {
 
 extension ScreenCViewController: ScreenCViewDelegateProtocol {
     func didCall() {
-      let goToScreenAViewController = UINavigationController(rootViewController: ScreenAViewController())
-        self.present(goToScreenAViewController, animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

@@ -32,7 +32,7 @@ class ScreenBViewController: UIViewController {
 
 extension ScreenBViewController: ScreenBViewDelegateProtocol {
     func didCall() {
-      let goToScreenCViewController = UINavigationController(rootViewController: ScreenCViewController())
-        self.present(goToScreenCViewController, animated: true)
+        let goToScreenCViewController = ScreenCViewController()
+          self.navigationController?.pushViewController(goToScreenCViewController, animated: true)
     }
 }

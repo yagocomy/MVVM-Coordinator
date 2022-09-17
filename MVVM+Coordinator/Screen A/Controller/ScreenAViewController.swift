@@ -31,7 +31,7 @@ class ScreenAViewController: UIViewController {
 
 extension ScreenAViewController: ScreenAViewDelegateProtocol {
     func didCall() {
-      let goToScreenBViewController = UINavigationController(rootViewController: ScreenBViewController())
-        self.present(goToScreenBViewController, animated: true)
+      let goToScreenBViewController = ScreenBViewController()
+        self.navigationController?.pushViewController(goToScreenBViewController, animated: true)
     }
 }
