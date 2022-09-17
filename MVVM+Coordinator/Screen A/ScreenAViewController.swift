@@ -19,7 +19,7 @@ class ScreenAViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(screenAView)
         makeConstraints()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .white
     }
     
     func makeConstraints() {
@@ -33,6 +33,5 @@ extension ScreenAViewController: ScreenAViewDelegateProtocol {
     func didCall() {
       let goToScreenBViewController = UINavigationController(rootViewController: ScreenBViewController())
         self.present(goToScreenBViewController, animated: true)
-        
     }
 }

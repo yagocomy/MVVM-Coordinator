@@ -1,27 +1,27 @@
 //
-//  Screen A.swift
+//  ScreenCView.swift
 //  MVVM+Coordinator
 //
-//  Created by Yago De Moura Silva on 12/09/22.
+//  Created by Yago De Moura Silva on 16/09/22.
 //
 
 import UIKit
 import SnapKit
 
-protocol ScreenAViewDelegateProtocol: AnyObject {
+protocol ScreenCViewDelegateProtocol: AnyObject {
     func didCall()
 }
 
-class ScreenAView: UIView {
+class ScreenCView: UIView {
     
-    weak var delegate: ScreenAViewDelegateProtocol?
-    var viewController: UIViewController = ScreenAViewController()
+    weak var delegate: ScreenCViewDelegateProtocol?
+    var viewController: UIViewController = ScreenCViewController()
     
     private lazy var firstLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = .systemFont(ofSize: 30, weight: .bold)
         label.backgroundColor = .white
-        label.text = "Você está na tela A"
+        label.text = "Você está na tela C"
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = .zero
@@ -30,7 +30,7 @@ class ScreenAView: UIView {
     
     private lazy var goToNextScreenButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Vamos para a tela B", for: .normal)
+        button.setTitle("Vamos para a tela A", for: .normal)
         button.backgroundColor = .black
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(callController), for: .touchUpInside)

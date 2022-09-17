@@ -7,14 +7,21 @@
 
 import UIKit
 
+protocol ScreenBViewDelegateProtocol: AnyObject {
+    func didCall()
+}
+
 class ScreenBView: UIView {
+    
+    weak var delegate: ScreenBViewDelegateProtocol?
+    var viewController: UIViewController = ScreenBViewController()
     
     private lazy var firstLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = .systemFont(ofSize: 30, weight: .bold)
-        label.backgroundColor = .red
+        label.backgroundColor = .white
         label.text = "Você está na tela B"
-        label.textColor = .blue
+        label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = .zero
         return label
@@ -23,9 +30,9 @@ class ScreenBView: UIView {
     private lazy var goToNextScreenButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Vamos para a tela C", for: .normal)
-        button.backgroundColor = .blue
+        button.backgroundColor = .black
         button.layer.cornerRadius = 10
-       // button.addTarget(self, action: #selector(callController), for: .touchUpInside)
+        button.addTarget(self, action: #selector(callController), for: .touchUpInside)
         return button
     }()
     
@@ -53,9 +60,10 @@ class ScreenBView: UIView {
             self.addSubview(goToNextScreenButton)
         }
 }
-//    @objc private func callController(){
-//        delegate?.didCall()
-//    }
+    
+    @objc private func callController(){
+        delegate?.didCall()
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

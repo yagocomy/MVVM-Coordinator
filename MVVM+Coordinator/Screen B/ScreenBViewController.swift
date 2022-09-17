@@ -12,7 +12,7 @@ class ScreenBViewController: UIViewController {
 
     private lazy var screenBView: ScreenBView = {
       let view = ScreenBView()
-       // view.delegate = self
+        view.delegate = self
         return view
     }()
     
@@ -20,7 +20,7 @@ class ScreenBViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(screenBView)
         makeConstraints()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .white
     }
     
     func makeConstraints() {
@@ -30,3 +30,9 @@ class ScreenBViewController: UIViewController {
     }
 }
 
+extension ScreenBViewController: ScreenBViewDelegateProtocol {
+    func didCall() {
+      let goToScreenCViewController = UINavigationController(rootViewController: ScreenCViewController())
+        self.present(goToScreenCViewController, animated: true)
+    }
+}

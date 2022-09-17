@@ -15,6 +15,8 @@
 		A074AF2E28D004B900914D1A /* ScreenAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF2D28D004B900914D1A /* ScreenAView.swift */; };
 		A074AF3E28D13BE100914D1A /* ScreenBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF3D28D13BE100914D1A /* ScreenBViewController.swift */; };
 		A074AF4028D13D2F00914D1A /* ScreenBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF3F28D13D2F00914D1A /* ScreenBView.swift */; };
+		A074AF4328D5427700914D1A /* ScreenCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF4228D5427700914D1A /* ScreenCViewController.swift */; };
+		A074AF4528D5428300914D1A /* ScreenCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF4428D5428300914D1A /* ScreenCView.swift */; };
 		A54815A91E31C24212C7CCDB /* Pods_MVVM_Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6C78E2CA483FA3385CF414 /* Pods_MVVM_Coordinator.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		A074AF2D28D004B900914D1A /* ScreenAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAView.swift; sourceTree = "<group>"; };
 		A074AF3D28D13BE100914D1A /* ScreenBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBViewController.swift; sourceTree = "<group>"; };
 		A074AF3F28D13D2F00914D1A /* ScreenBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBView.swift; sourceTree = "<group>"; };
+		A074AF4228D5427700914D1A /* ScreenCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCViewController.swift; sourceTree = "<group>"; };
+		A074AF4428D5428300914D1A /* ScreenCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCView.swift; sourceTree = "<group>"; };
 		F14EB6EE3DC42958E8052070 /* Pods-MVVM+Coordinator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Coordinator.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+Coordinator/Pods-MVVM+Coordinator.debug.xcconfig"; sourceTree = "<group>"; };
 		F2268D2416E1D08C59C53BE0 /* Pods-MVVM+Coordinator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Coordinator.release.xcconfig"; path = "Target Support Files/Pods-MVVM+Coordinator/Pods-MVVM+Coordinator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +71,7 @@
 		A074AF1828CFF7D100914D1A /* MVVM+Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				A074AF4128D5426500914D1A /* Screen C */,
 				A074AF3C28D13BA700914D1A /* Screen B */,
 				A074AF3B28D13B7B00914D1A /* Screen A */,
 				A074AF1928CFF7D100914D1A /* AppDelegate.swift */,
@@ -94,6 +99,15 @@
 				A074AF3F28D13D2F00914D1A /* ScreenBView.swift */,
 			);
 			path = "Screen B";
+			sourceTree = "<group>";
+		};
+		A074AF4128D5426500914D1A /* Screen C */ = {
+			isa = PBXGroup;
+			children = (
+				A074AF4228D5427700914D1A /* ScreenCViewController.swift */,
+				A074AF4428D5428300914D1A /* ScreenCView.swift */,
+			);
+			path = "Screen C";
 			sourceTree = "<group>";
 		};
 		DA542FE41F2A7CC57C8AD925 /* Frameworks */ = {
@@ -229,10 +243,12 @@
 			files = (
 				A074AF1E28CFF7D100914D1A /* ScreenAViewController.swift in Sources */,
 				A074AF1A28CFF7D100914D1A /* AppDelegate.swift in Sources */,
+				A074AF4528D5428300914D1A /* ScreenCView.swift in Sources */,
 				A074AF2E28D004B900914D1A /* ScreenAView.swift in Sources */,
 				A074AF4028D13D2F00914D1A /* ScreenBView.swift in Sources */,
 				A074AF1C28CFF7D100914D1A /* SceneDelegate.swift in Sources */,
 				A074AF3E28D13BE100914D1A /* ScreenBViewController.swift in Sources */,
+				A074AF4328D5427700914D1A /* ScreenCViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
