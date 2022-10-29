@@ -14,14 +14,14 @@ protocol ScreenCViewDelegateProtocol: AnyObject {
 
 class ScreenCView: UIView {
     
+    var constants: Text?
     weak var delegate: ScreenCViewDelegateProtocol?
-    var viewController: UIViewController = ScreenCViewController()
     
     private lazy var firstLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = .systemFont(ofSize: 30, weight: .bold)
         label.backgroundColor = .white
-        label.text = "Você está na tela C"
+        label.text = constants?.goToScreenCLabelText
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = .zero
@@ -30,7 +30,7 @@ class ScreenCView: UIView {
     
     private lazy var goToNextScreenButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Vamos para a tela A", for: .normal)
+        button.setTitle( constants?.goToScreenALabelText, for: .normal)
         button.backgroundColor = .black
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(callController), for: .touchUpInside)
@@ -41,26 +41,26 @@ class ScreenCView: UIView {
         super.init(frame: CGRect.zero)
         buildHierarchy()
         makeConstraints()
-        
-        func makeConstraints() {
-            firstLabel.snp.makeConstraints{ make in
-                make.top.equalToSuperview().offset(80)
-                make.left.equalToSuperview().offset(20)
-                make.right.equalToSuperview().offset(-20)
-            }
-            
-            goToNextScreenButton.snp.makeConstraints{ make in
-                make.bottom.equalToSuperview().offset(-20)
-                make.left.equalToSuperview().offset(20)
-                make.right.equalToSuperview().offset(-20)
-            }
-        }
-        
-        func buildHierarchy(){
-            self.addSubview(firstLabel)
-            self.addSubview(goToNextScreenButton)
-        }
 }
+
+    func makeConstraints() {
+        firstLabel.snp.makeConstraints{ make in
+            make.top.equalToSuperview().offset(80)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+        }
+        
+        goToNextScreenButton.snp.makeConstraints{ make in
+            make.bottom.equalToSuperview().offset(-20)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+        }
+    }
+    
+    func buildHierarchy(){
+        self.addSubview(firstLabel)
+        self.addSubview(goToNextScreenButton)
+    }
     @objc private func callController(){
         delegate?.didCall()
     }

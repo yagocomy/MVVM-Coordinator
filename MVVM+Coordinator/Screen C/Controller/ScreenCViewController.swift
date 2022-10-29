@@ -10,6 +10,8 @@ import UIKit
 
 
 class ScreenCViewController: UIViewController {
+    
+    var viewModel: ScreenCViewModel?
 
     private lazy var screenCView: ScreenCView = {
       let view = ScreenCView()

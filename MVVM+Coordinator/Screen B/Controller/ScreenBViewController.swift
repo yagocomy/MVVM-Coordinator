@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class ScreenBViewController: UIViewController {
+    
+    var viewModel: ScreenBViewModel?
 
     private lazy var screenBView: ScreenBView = {
       let view = ScreenBView()

@@ -9,6 +9,8 @@ import UIKit
 
 class ScreenAViewController: UIViewController {
     
+    var viewModel: ScreenAViewModel?
+    
     private lazy var screenAView: ScreenAView = {
       let view = ScreenAView()
         view.delegate = self

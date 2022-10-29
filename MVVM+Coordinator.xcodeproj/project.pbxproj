@@ -20,6 +20,7 @@
 		A074AF4C28D63C5200914D1A /* ViewMOdel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF4B28D63C5200914D1A /* ViewMOdel.swift */; };
 		A074AF5128D63CBF00914D1A /* ScreenBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF5028D63CBF00914D1A /* ScreenBViewModel.swift */; };
 		A074AF5628D63D1100914D1A /* ScreenAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF5528D63D1100914D1A /* ScreenAViewModel.swift */; };
+		A074AF5828D691D700914D1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074AF5728D691D700914D1A /* Constants.swift */; };
 		A54815A91E31C24212C7CCDB /* Pods_MVVM_Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6C78E2CA483FA3385CF414 /* Pods_MVVM_Coordinator.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		A074AF4B28D63C5200914D1A /* ViewMOdel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMOdel.swift; sourceTree = "<group>"; };
 		A074AF5028D63CBF00914D1A /* ScreenBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBViewModel.swift; sourceTree = "<group>"; };
 		A074AF5528D63D1100914D1A /* ScreenAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAViewModel.swift; sourceTree = "<group>"; };
+		A074AF5728D691D700914D1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F14EB6EE3DC42958E8052070 /* Pods-MVVM+Coordinator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Coordinator.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+Coordinator/Pods-MVVM+Coordinator.debug.xcconfig"; sourceTree = "<group>"; };
 		F2268D2416E1D08C59C53BE0 /* Pods-MVVM+Coordinator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Coordinator.release.xcconfig"; path = "Target Support Files/Pods-MVVM+Coordinator/Pods-MVVM+Coordinator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A05FE135290D71B80028279B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A074AF5728D691D700914D1A /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A074AF0D28CFF7D100914D1A = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 		A074AF1828CFF7D100914D1A /* MVVM+Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				A05FE135290D71B80028279B /* Utils */,
 				A074AF4128D5426500914D1A /* Screen C */,
 				A074AF3C28D13BA700914D1A /* Screen B */,
 				A074AF3B28D13B7B00914D1A /* Screen A */,
@@ -333,6 +344,7 @@
 				A074AF1C28CFF7D100914D1A /* SceneDelegate.swift in Sources */,
 				A074AF3E28D13BE100914D1A /* ScreenBViewController.swift in Sources */,
 				A074AF4328D5427700914D1A /* ScreenCViewController.swift in Sources */,
+				A074AF5828D691D700914D1A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
