@@ -14,15 +14,14 @@ protocol ScreenAViewDelegateProtocol: AnyObject {
 
 class ScreenAView: UIView {
     
-    var constants: Text?
-    
+    var constants: Text? = Text()
     weak var delegate: ScreenAViewDelegateProtocol?
     
     private lazy var firstLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = .systemFont(ofSize: 30, weight: .bold)
         label.backgroundColor = .white
-        label.text = constants?.goToScreenALabelText
+        label.text = constants?.screenA
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = .zero
